@@ -1,0 +1,850 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+
+body {
+    background: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+/* HEADER */
+.spotify-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    height: 64px;
+}
+
+
+
+
+.logo-main i {
+    font-size: 2.2rem;
+}
+
+
+
+
+
+
+
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+ }
+
+
+
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+.home-icon {
+    background: #1f1f1f;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.search-bar-input {
+    background: #1f1f1f;
+    width: 400px;
+    height: 48px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border: 1px solid transparent;
+}
+
+
+
+
+.search-bar-input:hover {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+
+
+
+.search-bar-input input {
+    background: transparent;
+    border: none;
+    color: white;
+    margin-left: 10px;
+    flex: 1;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+
+.vertical-line {
+    width: 1px;
+    height: 25px;
+    background: #555;
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+/* NAV RIGHT */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+
+
+
+.extra-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+.extra-links a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+
+
+
+.extra-links a:hover {
+    color: #fff;
+    transform: scale(1.04);
+}
+
+
+
+
+.sep-line {
+    width: 1px;
+    height: 32px;
+    background: #333;
+}
+
+
+
+
+
+
+
+
+.auth-box {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.btn-signup {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+
+
+
+.btn-signup:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+
+
+
+.btn-login-large {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 14px 34px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+
+
+.btn-login-large:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/* LAYOUT */
+.layout-main {
+    display: flex;
+    flex: 1;
+    padding: 0 8px 8px;
+    gap: 8px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+/* SIDEBAR */
+.sidebar-new {
+    width: 340px;
+    background: #121212;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+
+
+
+.library-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px 20px;
+    color: #b3b3b3;
+}
+
+
+
+
+.lib-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+}
+
+
+
+
+.add-playlist-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+
+
+.add-playlist-btn:hover {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+.card-side {
+    background: #1f1f1f;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+
+
+
+.card-side h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+
+
+.card-side p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+
+
+.btn-action {
+    background: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+
+
+
+
+
+
+.btn-action:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+.sidebar-footer {
+    padding: 32px 24px;
+}
+
+
+.legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+
+.legal-links a {
+    color: #b3b3b3;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Efeito do Botão de Idioma (conforme o vídeo) */
+.lang-btn {
+    background: transparent;
+    border: 1px solid #727272;
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: all 0.2s ease; /* Suaviza a animação */
+    cursor: pointer;
+}
+
+
+.lang-btn:hover {
+    border-color: #fff; /* Borda fica branca */
+    transform: scale(1.04); /* Pequeno aumento de tamanho como no vídeo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN CONTENT */
+.main-view-spotify {
+    flex: 1;
+    background: #121212;
+    border-radius: 8px;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+
+
+
+.shelf-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+
+
+
+.shelf-top h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+
+.show-all-btn {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+/* GRID */
+.music-grid-final {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+ }
+
+
+
+
+.album-card {
+    padding: 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
+
+.album-card:hover {
+    background: #282828;
+}
+
+
+
+
+.img-wrapper {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+
+
+
+.img-wrapper img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+}
+
+
+
+
+.green-play-btn {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 48px;
+    height: 48px;
+    background: #1db954;
+    border-radius: 50%;
+    border: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+    color: #000;
+}
+
+
+
+
+.album-card:hover .green-play-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+.music-name {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.artist-name {
+    color: #b3b3b3;
+    font-size: 0.85rem;
+}
+
+
+
+
+/* Container da seção */
+.artistas-populares {
+    padding: 20px;
+    background-color: #121212; /* Fundo escuro Spotify */
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+.ver-tudo {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+
+
+/* Grids dos Cards - A MÁGICA ACONTECE AQUI */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsividade */
+    gap: 20px;
+}
+
+
+
+
+/* Estilo do Card */
+.card {
+   padding: 16px;
+   border-radius: 8px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+
+
+
+
+.card:hover {
+    background-color: #282828;
+}
+
+
+
+
+/* Imagem arredondada */
+.card-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Mantém o card quadrado */
+    overflow: hidden;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+
+
+
+.artist-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Artistas são circulares, playlists são quadradas */
+    object-fit: cover;
+}
+
+
+
+
+/* Texto do card */
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.card-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    /* Truncar texto longo */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.card-subtitle {
+    color: #b3b3b3;
+    font-size: 0.85rem;
+}
+
+
+
+
+.green-play-btn {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 48px;
+    height: 48px;
+    background: #1db954;
+    border-radius: 50%;
+    border: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+    color: #000;
+    font-size: larger;
+    display: flex;        
+    align-items: center;  
+    justify-content: center;
+}
+.card:hover .green-play-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+/* FOOTER LINKS */
+.spotify-footer {
+    margin-top: 80px;
+    padding-bottom: 40px;
+}
+
+
+
+
+.footer-columns-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 40px;
+}
+
+
+
+
+.f-col h5 {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+
+
+
+.f-col a {
+    display: block;
+    color: #b3b3b3;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+
+
+
+.f-col a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+
+.f-social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+
+
+
+.circle-icon {
+    background: #292929;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+
+
+.circle-icon:hover {
+    background: #727272;
+}
+
+
+
+
+.footer-sep {
+    border: 0;
+    border-top: 1px solid #292929;
+    margin: 40px 0 20px;
+}
+
+
+
+
+.copyright {
+    color: #b3b3b3;
+    font-size: 0.8rem;
+}
+
+
+
+
+.premium-banner-spotify {
+    background: linear-gradient(90deg, #af2896 0%, #509bf5 100%);
+    padding: 11px 24px; /* Padding bem pequeno para ser fino */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+
+.banner-wrapper {
+    display: flex;
+    justify-content: space-between; /* Texto na esquerda, botão na direita */
+    align-items: center;
+    max-width: 100%;
+}
+
+
+.upper-text {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 4px; /* Espaço mínimo entre as linhas de texto */
+    letter-spacing: 0.1em;
+}
+
+
+.main-text {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0; /* Remove margens do parágrafo que esticam o banner */
+}
+
+
+.btn-subscribe {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 14px 32px; /* Botão mais comprido */
+    border-radius: 500px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.1s ease;
+}
+
+
+.btn-subscribe:hover {
+    transform: scale(1.04); /* Efeito de zoom suave */
+}
