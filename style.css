@@ -18,12 +18,6 @@ body {
 }
 
 
-
-
-
-
-
-
 /* HEADER */
 .spotify-nav {
     display: flex;
@@ -37,16 +31,11 @@ body {
 
 
 .logo-main i {
-    font-size: 2.2rem;
+    font-size: 35px;
 }
 
 
-
-
-
-
-
-
+/*Lado Esquerdo do Header*/
 .nav-left {
     display: flex;
     align-items: center;
@@ -73,15 +62,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 24px;
     cursor: pointer;
 }
-
-
-
-
-
-
 
 
 .search-bar-input {
@@ -113,7 +96,7 @@ body {
     margin-left: 10px;
     flex: 1;
     outline: none;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -129,12 +112,7 @@ body {
 
 
 
-
-
-
-
-
-/* NAV RIGHT */
+/* Lado Direito do Header*/
 .nav-right {
     display: flex;
     align-items: center;
@@ -157,7 +135,7 @@ body {
     text-decoration: none;
     color: #b3b3b3;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 
 
@@ -165,7 +143,7 @@ body {
 
 .extra-links a:hover {
     color: #fff;
-    transform: scale(1.04);
+    transform: scale(1.04);/* aumenta o tamanho da palavra quando o cursor passa*/
 }
 
 
@@ -197,7 +175,7 @@ body {
     border: none;
     color: #b3b3b3;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
     margin-right: 25px;
 }
@@ -220,7 +198,7 @@ body {
     padding: 14px 34px;
     border-radius: 30px;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -234,24 +212,14 @@ body {
 
 
 
-
-
-
-
-
-/* LAYOUT */
+/* Sua Biblioteca */
 .layout-main {
     display: flex;
-    flex: 1;
+    flex: 1; /* Faz um item ocupar todo o espaço disponível no contâiner*/
     padding: 0 8px 8px;
     gap: 8px;
     overflow: hidden;
 }
-
-
-
-
-
 
 
 
@@ -268,7 +236,7 @@ body {
 
 
 
-.library-top-bar {
+.library {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -306,11 +274,6 @@ body {
 
 
 
-
-
-
-
-
 .card-side {
     background: #1f1f1f;
     padding: 16px 20px;
@@ -322,7 +285,7 @@ body {
 
 
 .card-side h4 {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -331,7 +294,7 @@ body {
 
 
 .card-side p {
-    font-size: 0.85rem;
+    font-size: 13px;
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -363,12 +326,9 @@ body {
 
 
 
-
-
-
-
 .sidebar-footer {
-    padding: 32px 24px;
+    padding: 45px 38px;
+    margin-top: auto;
 }
 
 
@@ -392,7 +352,7 @@ body {
 }
 
 
-/* Efeito do Botão de Idioma (conforme o vídeo) */
+
 .lang-btn {
     background: transparent;
     border: 1px solid #727272;
@@ -401,28 +361,20 @@ body {
     border-radius: 50px;
     font-weight: 700;
     font-size: 13px;
-    transition: all 0.2s ease; /* Suaviza a animação */
+    transition: all 0.2s ease;
     cursor: pointer;
 }
 
 
 .lang-btn:hover {
-    border-color: #fff; /* Borda fica branca */
-    transform: scale(1.04); /* Pequeno aumento de tamanho como no vídeo */
+    border-color: #fff; 
+    transform: scale(1.04); 
 }
 
 
 
 
-
-
-
-
-
-
-
-
-/* MAIN CONTENT */
+/* Conteúdo Principal*/
 .main-view-spotify {
     flex: 1;
     background: #121212;
@@ -463,13 +415,11 @@ body {
 
 
 
-
-
-
 /* GRID */
 .music-grid-final {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /*cria automaticamente o número máximo de colunas com largura mínima de 
+ e máxima de 1fr*/
     gap: 24px;
  }
 
@@ -511,7 +461,7 @@ body {
 
 
 .green-play-btn {
-    position: absolute;
+    position: absolute;/* O botão irá se posicionar no canto inferior direito da imagem*/
     right: 8px;
     bottom: 8px;
     width: 48px;
@@ -519,9 +469,9 @@ body {
     background: #1db954;
     border-radius: 50%;
     border: none;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: 0.3s;
+    opacity: 0; /* O botão não irá aparecer*/
+    transform: translateY(10px); /* O botão fica guardado 10px abaixo de sua posição original*/
+    transition: 0.3s; /* cria o efeito de subida*/
     color: #000;
 }
 
@@ -529,14 +479,9 @@ body {
 
 
 .album-card:hover .green-play-btn {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1;/* o botão se torna visível*/
+    transform: translateY(0); /* o botão volta para sua posição no canto da imagem*/
 }
-
-
-
-
-
 
 
 
@@ -545,9 +490,9 @@ body {
     font-weight: 700;
     font-size: 1rem;
     margin-bottom: 8px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow: hidden; /* Esconde o texto que sai do contêiner */
+    white-space: nowrap; /*garante que o texto seja uma linha só mesmo que acabe ultrapassando os limites do container*/
+    text-overflow: ellipsis; /* Adiciona "..." no final  quando o texto sai do contâiner*/
 }
 
 
@@ -555,7 +500,7 @@ body {
 
 .artist-name {
     color: #b3b3b3;
-    font-size: 0.85rem;
+    font-size: 13px;
 }
 
 
@@ -564,9 +509,9 @@ body {
 /* Container da seção */
 .artistas-populares {
     padding: 20px;
-    background-color: #121212; /* Fundo escuro Spotify */
+    background-color: #121212; 
     color: white;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 
@@ -592,17 +537,16 @@ body {
 
 
 
-/* Grids dos Cards - A MÁGICA ACONTECE AQUI */
+/* Grids dos Cards */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsividade */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
     gap: 20px;
 }
 
 
 
 
-/* Estilo do Card */
 .card {
    padding: 16px;
    border-radius: 8px;
@@ -623,7 +567,7 @@ body {
 /* Imagem arredondada */
 .card-image-container {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Mantém o card quadrado */
+    aspect-ratio: 1 / 1; /* Mantém o card quadrado, ele diz ao navegador que a largura e a altura do elemento devem ser sempre iguais */
     overflow: hidden;
     margin-bottom: 15px;
     position: relative;
@@ -635,8 +579,8 @@ body {
 .artist-img {
     width: 100%;
     height: 100%;
-    border-radius: 50%; /* Artistas são circulares, playlists são quadradas */
-    object-fit: cover;
+    border-radius: 50%; /* Deixar somente a imagem dos artistas redondas*/
+    object-fit: cover; /*força a imagem a preencher todo o espaço disponível dentro do contâiner e se a imagem for muito alta ou larga, recorta as partes excedentes*/
 }
 
 
@@ -653,9 +597,8 @@ body {
 
 .card-title {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 16px;
     margin-bottom: 5px;
-    /* Truncar texto longo */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -666,7 +609,7 @@ body {
 
 .card-subtitle {
     color: #b3b3b3;
-    font-size: 0.85rem;
+    font-size: 13px;
 }
 
 
@@ -690,6 +633,8 @@ body {
     align-items: center;  
     justify-content: center;
 }
+
+
 .card:hover .green-play-btn {
     opacity: 1;
     transform: translateY(0);
@@ -698,11 +643,7 @@ body {
 
 
 
-
-
-
-
-/* FOOTER LINKS */
+/* FOOTER */
 .spotify-footer {
     margin-top: 80px;
     padding-bottom: 40px;
@@ -722,7 +663,7 @@ body {
 
 .f-col h5 {
     margin-bottom: 12px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 
@@ -733,7 +674,7 @@ body {
     color: #b3b3b3;
     text-decoration: none;
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 
 
@@ -788,7 +729,7 @@ body {
 
 .copyright {
     color: #b3b3b3;
-    font-size: 0.8rem;
+    font-size: 12px;
 }
 
 
@@ -796,18 +737,18 @@ body {
 
 .premium-banner-spotify {
     background: linear-gradient(90deg, #af2896 0%, #509bf5 100%);
-    padding: 11px 24px; /* Padding bem pequeno para ser fino */
-    position: fixed;
+    padding: 11px 24px; 
+    position: fixed;/*posiciona um elemento em relação à janela do navegador, fixando-o no lugar mesmo com a rolagem da página*/
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 9999;/*força um elemento a ficar na frente de todos os outros na página*/
 }
 
 
 .banner-wrapper {
     display: flex;
-    justify-content: space-between; /* Texto na esquerda, botão na direita */
+    justify-content: space-between; 
     align-items: center;
     max-width: 100%;
 }
@@ -818,8 +759,8 @@ body {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
-    margin-bottom: 4px; /* Espaço mínimo entre as linhas de texto */
-    letter-spacing: 0.1em;
+    margin-bottom: 4px; 
+    letter-spacing: 0.1rem;/*define o espaçamento horizontal entre as letras de um texto*/
 }
 
 
@@ -835,7 +776,7 @@ body {
     background-color: #fff;
     color: #000;
     border: none;
-    padding: 14px 32px; /* Botão mais comprido */
+    padding: 14px 32px; 
     border-radius: 500px;
     font-weight: 700;
     font-size: 14px;
@@ -846,5 +787,5 @@ body {
 
 
 .btn-subscribe:hover {
-    transform: scale(1.04); /* Efeito de zoom suave */
+    transform: scale(1.04); 
 }
