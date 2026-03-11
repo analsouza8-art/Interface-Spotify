@@ -12,10 +12,12 @@
 
 
       <header class="spotify-nav">
+        
         <div class="nav-left">
             <div class="logo-main"><i class="fab fa-spotify"></i></div>
             <div class="search-section">
                 <div class="home-icon"><i class="fas fa-home"></i></div>
+
                 <div class="search-bar-input">
                     <i class="fas fa-search"></i>
                     <input type="text" placeholder="O que você quer ouvir?">
@@ -48,7 +50,7 @@
 
     <div class="layout-main">
         <aside class="sidebar-new">
-            <div class="library-top-bar">
+            <div class="library">
                 <div class="lib-header">
                     <i class="fas fa-book"></i>
                     <span>Sua Biblioteca</span>
@@ -72,6 +74,9 @@
                 </div>
             </div>
             <div class="sidebar-footer mt-auto">
+<!--d-flex: Transforma em Flexbox, flex-wrap: Permite que os itens quebrem para a linha de baixo se não couberem, gap-3: Define um espaçamento de 1rem (16px padrão) entre os itens
+  mb-4: Margem inferior de 1.5rem (24px padrão)
+-->
     <div class="legal-links d-flex flex-wrap gap-3 mb-4">
         <a href="#">Legal</a>
         <a href="#">Centro de Privacidade</a>
@@ -80,7 +85,9 @@
         <a href="#">Sobre anúncios</a>
         <a href="#">Acessibilidade</a>
     </div>
-    
+    <!--btn-outline-light: Botão com borda clara e fundo transparente, rounded-pill: Borda com cantos totalmente arredondados,lang-btn: Classe customizada,d-flex: Ativa o Flexbox para alinhamento interno,align-items-center: Alinha verticalmente o conteúdo ao centro
+  gap-1: Adiciona um pequeno espaço entre ícone e texto (0.25rem)
+-->
     <button class="btn btn-outline-light rounded-pill lang-btn d-flex align-items-center gap-1">
         <i class="fas fa-globe"></i>
         <span>Português do Brasil</span>
@@ -94,7 +101,7 @@
         <main class="main-view-spotify">
             <section class="shelf-container">
                 <div class="shelf-top">
-                    <h2>Músicas em alta</h2>
+                    <h2 id="saudacao">Músicas em alta</h2>
                     <a href="#" class="show-all-btn">Mostrar tudo</a>
                 </div>
 
@@ -172,7 +179,7 @@
 
 
     <div class="grid-container">
-        <!-- Card 1 -->
+
         <div class="card">
             <div class="card-image-container">
                 <img src="assets/baixados (3).jpg" alt="The Neighbourhood" class="artist-img">
@@ -189,6 +196,7 @@
           <div class="card">
             <div class="card-image-container">
                 <img src="assets/baixados (4).jpg" alt = "Artic Monkeys" class="artist-img">
+                     <button class="green-play-btn"><i class="fas fa-play"></i></button>
             </div>
             <div class="card-text">
                 <span class="card-title">Arctic Monkeys</span>
@@ -230,6 +238,7 @@
           <div class="card">
             <div class="card-image-container">
                 <img src="assets/baixados (7).jpg" alt = "Kikuo" class = "artist-img">
+                 <button class="green-play-btn"><i class="fas fa-play"></i></button>
             </div>
             <div class="card-text">
                 <span class="card-title">Kikuo</span>
@@ -314,6 +323,6 @@
     </div>
 </section>
 
-
+ <script src="script.js"></script>
 </body>
 </html>
